@@ -76,7 +76,7 @@ export default {
 
         <div class="btn">
 
-            <button @click="changePage(num)" v-for="num in lastPage">{{ num }}</button>
+            <button :class="{ 'click-page': currentPage == num }" @click="changePage(num)" v-for="num in lastPage">{{ num }}</button>
 
         </div>
 
@@ -105,8 +105,12 @@ h1 {
             border-left: none;
             border-right: none;
             background-color: #EDEDED;
-            border-bottom: 2px solid #3B5998;
+            border-bottom: 1px solid #3B5998;
         }
     }
+}
+
+.click-page {
+    border-bottom: 5px solid #3B5998 !important;
 }
 </style>
