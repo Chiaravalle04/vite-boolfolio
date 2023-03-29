@@ -1,8 +1,13 @@
 <script>
 import axios from 'axios';
+import AppProjectCard from './AppProjectCard.vue';
 
 export default {
     name: "AppMain",
+
+    components: {
+        AppProjectCard
+    },
 
     data() {
 
@@ -42,9 +47,16 @@ export default {
 </script>
 
 <template>
+
+    <h1>BoolFolio</h1>
   
+    <AppProjectCard :projects="projects"/>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+h1 {
+    padding: 20px;
+    color: #3B5998;
+}
 </style>

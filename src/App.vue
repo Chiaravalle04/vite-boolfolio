@@ -18,4 +18,8 @@ export default {
 
 <style lang="scss">
 @use "./styles/app.scss";
+
+body {
+  background-color: #EDEDED;
+}
 </style>
