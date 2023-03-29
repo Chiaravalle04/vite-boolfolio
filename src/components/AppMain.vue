@@ -42,8 +42,6 @@ export default {
 
                     this.lastPage = response.data.projects.last_page
 
-                    console.log(this.currentPage);
-
                 })
 
         },
