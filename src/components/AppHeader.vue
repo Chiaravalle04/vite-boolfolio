@@ -62,6 +62,7 @@ header {
         li {
             a {
                 padding: 10px;
+                font-weight: bold;
             }
         }
     }

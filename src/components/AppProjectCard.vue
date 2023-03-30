@@ -28,11 +28,11 @@ export default {
 
             <h2>{{ project.title }}</h2>
 
-            <p><b>Descrizione:</b> {{ project.description }}</p>
-
             <p><b>Creato con:</b> {{ project.tags }}</p>
 
             <p><b>Tipo:</b> {{ project.type.name }}</p>
+
+            <router-link :to="{ name: 'projects-show', params: { slug: project.slug } }">Vedi tutti i dettagli <i class="fa-solid fa-arrow-right-long"></i></router-link>
 
         </div>
 
@@ -64,6 +64,16 @@ export default {
             margin: 15px 0;
             line-height: 25px;
             font-weight: 500;
+        }
+        a {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            background-color: #3B5998;
+            margin-top: 20px;
+            border-radius: 15px;
         }
     }
 }

@@ -36,11 +36,20 @@ export default {
                 })
                 .then(response => {
 
-                    this.projects = response.data.projects.data;
+                    if (response.data.success) {
 
-                    console.log(this.projects);
+                        this.projects = response.data.projects.data;
+    
+                        console.log(this.projects);
+    
+                        this.lastPage = response.data.projects.last_page
 
-                    this.lastPage = response.data.projects.last_page
+                    } else {
+
+                        this.$router.push({ name: 'error' });
+
+                    }
+
 
                 })
 
