@@ -1,9 +1,9 @@
 <script>
 import axios from 'axios';
-import AppProjectCard from './AppProjectCard.vue';
+import AppProjectCard from '../components/AppProjectCard.vue';
 
 export default {
-    name: "AppMain",
+    name: "AppIndex",
 
     components: {
         AppProjectCard
@@ -66,19 +66,21 @@ export default {
 
 <template>
 
-    <h1>BoolFolio</h1>
+    <main>
   
-    <AppProjectCard :projects="projects"/>
+        <AppProjectCard :projects="projects"/>
 
-    <div class="container-btn">
+        <div class="container-btn">
 
-        <div class="btn">
+            <div class="btn">
 
-            <button :class="{ 'click-page': currentPage == num }" @click="changePage(num)" v-for="num in lastPage">{{ num }}</button>
+                <button :class="{ 'click-page': currentPage == num }" @click="changePage(num)" v-for="num in lastPage">{{ num }}</button>
+
+            </div>
 
         </div>
 
-    </div>
+    </main>
 
 </template>
 

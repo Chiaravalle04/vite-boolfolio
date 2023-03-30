@@ -22,8 +22,6 @@ export default {
 
 <template>
 
-    <h3>Progetti:</h3>
-
     <div class="main-container">
 
         <div class="card" v-for="project in projects">
@@ -43,9 +41,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-h3 {
-    padding-left: 20px;
-}
 .main-container {
     padding: 20px 0;
     display: flex;

@@ -3,3 +3,12 @@
 
 // ----- Font -----
 @import './partials/font.scss';
+
+// General Rules
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
